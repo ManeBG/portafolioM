@@ -1,0 +1,344 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.inici {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.miDescription {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contac-button {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Estilos para la clase .inici 
+.inici {
+    margin: 20px;
+    /* Ajusta los márgenes según tu diseño 
+    padding: 20px;
+    /* Espaciado dentro de la sección de inicio 
+    background-color: #2d2741 margin-bottom: 20px;
+    /* Margen inferior para separar esta sección 
+    overflow: hidden;
+    /* Limpiar el float de la imagen 
+}
+
+.inici {
+    overflow: hidden;
+    /* Ocultar el contenido que se desborda 
+}*/
+
+.photo {
+    width: 100%;
+    /* Ancho máximo de la imagen dentro del contenedor */
+    height: auto;
+    /* Mantener la proporción */
+    transition: transform 0.3s ease;
+    /* Transición suave al cambiar la escala */
+}
+
+.inici:hover .photo {
+    transform: scale(1.3);
+    /* Escalar la imagen al 130% del tamaño original al hacer hover */
+}
+
+.photo:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+/* Estilos para la foto de perfil */
+.photo {
+    width: 200px;
+    /* Ancho deseado para la foto */
+    height: auto;
+    /* Permite que la altura se ajuste automáticamente según el ancho */
+    float: left;
+    /* Alinear a la izquierda */
+    margin: 30px 30px 40px 30px;
+
+    /* Margen derecho para separar la imagen del texto */
+}
+
+.contac-button {
+    width: 90px;
+    height: auto;
+    float: left;
+}
+
+.miDescription {
+    max-width: 1000px;
+    /* Ajusta el valor según sea necesario */
+    margin: 50px 50px 30px 5px;
+    /* Cambia este valor para ajustar el margen */
+    text-align: center;
+    /* Esto justificará el texto para una apariencia más uniforme */
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 70px;
+    border: 2px solid #fff;
+    /* Color del borde del botón */
+    color: #fff;
+    /* Color del texto del botón */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: transparent;
+    /* Fondo transparente para botones */
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Estilo específico para el botón de GitHub */
+#github-btn {
+    display: inline-block;
+    /* Mostrar como bloque en dispositivos móviles */
+    margin-top: 10px;
+    /* Espacio entre los botones */
+}
+
+/* Media Query para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    #github-btn {
+        display: block;
+        /* Mostrar como bloque en dispositivos móviles */
+        margin-top: 10px;
+        /* Espacio entre los botones */
+    }
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+#dark-mode {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#lang-toggle {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+}
+
+header {
+    background-color: #333;
+    padding: .15rem;
+}
+
+h1,
+h2,
+h3 {
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+button {
+    background-color: #00b0ff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    max-width: 700px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #00b0ff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: block;
+    /* Mostrar el botón como bloque para colocarlo debajo */
+    margin-top: 10px;
+    /* Espaciado superior para separarlo del cuadro de texto */
+    margin: 0 auto;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Para que las partículas estén detrás del contenido */
+}
+
+.glitch {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image
+}
+
+.custom-card {
+    width: 30rem;
+    background-color: black;
+}
+
+*/
+/*.custom-card {
+    min-width: 200px;
+    max-width: 30rem;
+    min-height: 150px;
+    max-height: 300px;
+}*/
+
+.body-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
+    /* Espacio de 20px entre elementos dentro del contenedor */
+}
+
+section {
+    margin-bottom: 100px;
+    /* Aumenta el espacio a 50px */
+}
+
+.body-contacto section {
+    margin-: 10px;
+
+    /* Ajusta el espacio entre las secciones de contacto */
+}
+
+
+/* Estilo base de las tarjetas */
+.card {
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de hover */
+.card:hover {
+    transform: scale(1.05);
+    /* Escala la tarjeta al 105% de su tamaño original */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave alrededor de la tarjeta */
+}
