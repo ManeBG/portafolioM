@@ -41,8 +41,8 @@ body {
 }
 
 .contac-button {
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
     object-fit: contain;
 }
 
@@ -64,23 +64,28 @@ body {
 }*/
 
 .photo {
-    width: 100%;
-    /* Ancho máximo de la imagen dentro del contenedor */
-    height: auto;
-    /* Mantener la proporción */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     transition: transform 0.3s ease;
-    /* Transición suave al cambiar la escala */
 }
 
-.inici:hover .photo {
-    transform: scale(1.3);
-    /* Escalar la imagen al 130% del tamaño original al hacer hover */
-}
 
+/* Solo cuando el mouse esté sobre la imagen */
 .photo:hover {
     transform: scale(1.1);
 }
 
+.botones img {
+
+    margin: 0 10px;
+}
+
+/* Asegura que no afecte otros elementos */
+.contac-button:hover {
+    transform: none;
+    /* Para evitar zoom no deseado en los botones */
+}
 
 
 
@@ -98,6 +103,21 @@ body {
 
     /* Margen derecho para separar la imagen del texto */
 }
+
+.icon-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-hover:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
 
 .contac-button {
     width: 90px;
@@ -138,7 +158,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #fff;
+    background-color: #d62c2c;
     color: #000;
 }
 
@@ -170,7 +190,7 @@ header {
 }
 
 #dark-mode {
-    background-color: #007bff;
+    background-color: #ee3232;
     color: #fff;
     padding: 5px 10px;
     border: none;
@@ -179,7 +199,7 @@ header {
 }
 
 #lang-toggle {
-    background-color: #007bff;
+    background-color: #ec3737;
     color: #fff;
     padding: 5px 10px;
     border: none;
@@ -267,7 +287,7 @@ form textarea {
 }
 
 form button {
-    background-color: #00b0ff;
+    background-color: #d33535;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
