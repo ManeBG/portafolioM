@@ -13,6 +13,11 @@ body {
     padding: 0 20px;
 }
 
+h3 {
+    padding-top: 13px;
+    padding-left: 15px;
+}
+
 .contenido {
     display: flex;
     flex-wrap: wrap;
@@ -40,11 +45,7 @@ body {
     gap: 10px;
 }
 
-.contac-button {
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
-}
+
 
 /* Estilos para la clase .inici 
 .inici {
@@ -88,6 +89,11 @@ body {
 }
 
 
+.logoM {
+    width: 100px;
+    height: 70px;
+}
+
 
 
 
@@ -123,6 +129,7 @@ body {
     width: 90px;
     height: auto;
     float: left;
+    padding-bottom: 70px;
 }
 
 .miDescription {
@@ -323,14 +330,6 @@ form button {
     background-color: black;
 }
 
-*/
-/*.custom-card {
-    min-width: 200px;
-    max-width: 30rem;
-    min-height: 150px;
-    max-height: 300px;
-}*/
-
 .body-contacto {
     display: flex;
     flex-direction: column;
@@ -344,7 +343,7 @@ section {
 }
 
 .body-contacto section {
-    margin-: 10px;
+    margin: 10px;
 
     /* Ajusta el espacio entre las secciones de contacto */
 }
