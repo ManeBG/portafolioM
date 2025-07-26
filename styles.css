@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.inici {
+    max-width: 1200px;
+    margin: -30px auto;
+    padding: 0 20px;
+}
+
+h3 {
+    padding-top: 13px;
+    padding-left: 15px;
+}
+
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-proyectos {
+    max-width: 1200px;
+    margin: 80px auto 0 auto;
+    /* margen superior para separación */
+    padding: 0 20px;
+    /* padding lateral opcional */
+}
+
+
+.photo {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin: 10px auto 10px auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.photo:hover {
+    transform: scale(1.1);
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Asegura alineación vertical */
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.logoM {
+    width: 100px;
+    height: 70px;
+}
+
+.icon-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-hover:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contac-button {
+    max-width: 90px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#github-btn {
+    margin-left: 30px;
+    /* Ajusta este valor según lo que necesites */
+}
+
+
+.miDescription {
+    max-width: 1000px;
+    margin: 10px 50px 30px 5px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 70px;
+    border: 2px solid var(--theme-color);
+    color: var(--theme-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--theme-color);
+    color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+    #github-btn {
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+#dark-mode,
+#lang-toggle {
+    background-color: var(--theme-color);
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.card {
+    transition: transform 0.3s ease;
+    border-color: var(--theme-color) !important;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+:root {
+    --theme-color: red;
+}
+
+body.en {
+    --theme-color: blue;
+}
