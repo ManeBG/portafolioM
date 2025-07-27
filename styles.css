@@ -18,8 +18,9 @@ body {
 
 .inici {
     max-width: 1200px;
-    margin: -30px auto;
+    margin: 0 auto;
     padding: 0 20px;
+    text-align: center;
 }
 
 h3 {
@@ -37,10 +38,13 @@ h3 {
 
 .container-proyectos {
     max-width: 1200px;
-    margin: 80px auto 0 auto;
-    /* margen superior para separación */
+    margin: 140px auto 0 auto;
     padding: 0 20px;
-    /* padding lateral opcional */
+}
+
+section {
+    scroll-margin-top: 120px;
+    /* altura de tu navbar */
 }
 
 
@@ -86,9 +90,24 @@ h3 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#github-btn {
-    margin-left: 30px;
-    /* Ajusta este valor según lo que necesites */
+#portafolio {
+    scroll-margin-top: 120px;
+    margin-bottom: 80px;
+}
+
+
+#inicio {
+    scroll-margin-top: 120px;
+    margin-bottom: 80px;
+}
+
+
+#habilidades {
+    margin-top: 120px;
+    /* Más espacio entre secciones */
+    scroll-margin-top: 120px;
+    /* Para navegación desde el navbar */
+    margin-bottom: 80px;
 }
 
 
@@ -173,6 +192,9 @@ footer {
 .card {
     transition: transform 0.3s ease;
     border-color: var(--theme-color) !important;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* fondo oscuro semi-transparente */
 }
 
 .card:hover {
