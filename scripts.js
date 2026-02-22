@@ -1,50 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
-    AOS.init();
+  // ── AOS animations ─────────────────────────────────────────
+  AOS.init({ once: true, offset: 60 });
 
-    particlesJS("particles-js", {
-        "particles": {
-            "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-            "color": { "value": "#ffffff" },
-            "shape": { "type": "circle" },
-            "opacity": { "value": 0.5, "anim": { "enable": false } },
-            "size": { "value": 3, "random": true },
-            "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
-            "move": { "enable": true, "speed": 6 }
-        },
-        "interactivity": {
-            "events": {
-                "onhover": { "enable": true, "mode": "repulse" },
-                "onclick": { "enable": true, "mode": "push" }
-            }
-        },
-        "retina_detect": true
-    });
-
-    const darkModeBtn = document.getElementById("dark-mode");
-    const langToggleBtn = document.getElementById("lang-toggle");
-    const title = document.getElementById("inicio-title");
-    const introText = document.getElementById("intro-text");
-    const body = document.body;
-
-    // Modo oscuro
-    darkModeBtn.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-    });
-
-    // Cambio de idioma y color del tema
-    langToggleBtn.addEventListener("click", () => {
-        if (langToggleBtn.textContent === "English") {
-            langToggleBtn.textContent = "Español";
-            title.textContent = "Home";
-            introText.textContent = "Hello! I'm Manuel, a Computer Systems Engineering student...";
-            body.classList.remove("es");
-            body.classList.add("en");
-        } else {
-            langToggleBtn.textContent = "English";
-            title.textContent = "Inicio";
-            introText.textContent = "¡Hola! Soy Manuel, estudiante de Ingeniería en Sistemas Computacionales...";
-            body.classList.remove("en");
-            body.classList.add("es");
-        }
-    });
+  // ── Particles (blue accent palette) ────────────────────────
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 55, density: { enable: true, value_area: 900 } },
+      color:  { value: "#2563EB" },
+      shape:  { type: "circle" },
+      opacity: { value: 0.35, random: true, anim: { enable: false } },
+      size:    { value: 2.5, random: true },
+      line_linked: {
+        enable:   true,
+        distance: 140,
+        color:    "#2563EB",
+        opacity:  0.18,
+        width:    1
+      },
+      move: { enable: true, speed: 2.5, random: true, out_mode: "out" }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "grab" },
+        onclick:  { enable: true, mode: "push" },
+        resize:   true
+      },
+      modes: {
+        grab:  { distance: 160, line_linked: { opacity: 0.4 } },
+        push:  { particles_nb: 3 }
+      }
+    },
+    retina_detect: true
+  });
 });
