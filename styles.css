@@ -499,19 +499,31 @@ section {
   grid-template-columns: 1fr;
 }
 
+/* contenedor de imagen = sin padding y con alto real */
 .card-img-wrap {
   background-color: var(--bg-alt);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  min-height: 160px;
+  padding: 0;
+  /* 🔥 fuera padding */
+  min-height: 0;
+  /* opcional */
+  height: 220px;
+  /* 🔥 alto fijo para que se vea grande */
+  overflow: hidden;
+  /* 🔥 recorte bonito */
+  border-radius: 16px;
 }
 
+/* imagen = que llene sí o sí */
 .card-img-wrap img {
-  max-width: 160px;
-  max-height: 120px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 0;
+  /* ya lo controla el wrap */
+  transform: scale(1.03);
+  /* micro zoom pro */
+  filter: contrast(1.05) saturate(1.05);
 }
 
 .card-body {

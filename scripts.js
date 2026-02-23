@@ -28,7 +28,7 @@ const i18n = {
       title: "Proyectos",
       subtitle: "Algunos trabajos que demuestran lo que puedo construir para ti.",
       view: "Ver proyecto",
-      p1: { title: "Tienda Online – Mango Manía", desc: "Plataforma de ventas en línea con catálogo dinámico, carrito y gestión de pedidos." },
+      p1: { title: "Hotel & Event Resort – Demo Comercial", desc: "Landing page premium para hotel y salón de eventos. Diseño moderno, enfoque en conversión (WhatsApp y cotizaciones), optimizado para dispositivos móviles y deploy en Vercel." },
       p2: { title: "Nube Delivery", desc: "Sistema de pedidos en línea con integración a Telegram. Gestión de repartidores y seguimiento en tiempo real." },
       p3: { title: "Lavado de Motocicletas", desc: "Web informativa con Google Maps, galería de servicios y botón directo a WhatsApp para agendar citas." }
     },
@@ -72,7 +72,7 @@ const i18n = {
       title: "Projects",
       subtitle: "Selected work that shows what I can build for you.",
       view: "View project",
-      p1: { title: "Online Store – Mango Manía", desc: "E-commerce with dynamic catalogue, shopping cart and integrated payment gateway." },
+      p1: { title: "Hotel & Event Resort – Commercial Demo", desc: "Premium landing page for hotel and event hall. Modern design, conversion-focused (WhatsApp and quotes), mobile-optimized and deployed on Vercel." },
       p2: { title: "Nube Delivery", desc: "Online ordering system with Telegram integration for automatic notifications and real-time order tracking." },
       p3: { title: "Motorcycle Wash", desc: "Informational website with Google Maps, service gallery and a direct WhatsApp button to book appointments." }
     },
