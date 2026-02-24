@@ -30,7 +30,7 @@ const i18n = {
       view: "Ver proyecto",
       p1: { title: "Hotel & Event Resort – Demo Comercial", desc: "Landing page premium para hotel y salón de eventos. Diseño moderno, enfoque en conversión (WhatsApp y cotizaciones), optimizado para dispositivos móviles y deploy en Vercel." },
       p2: { title: "Nube Delivery", desc: "Sistema de pedidos en línea con integración a Telegram. Gestión de repartidores y seguimiento en tiempo real." },
-      p3: { title: "Lavado de Motocicletas", desc: "Web informativa con Google Maps, galería de servicios y botón directo a WhatsApp para agendar citas." }
+      p3: { title: "Sistema de captación y agendado para lavado de motocicletas", badge: "Caso real", desc: "Plataforma enfocada en la generación de ingresos y ahorro de tiempo operativo en un taller mecánico real.", b1: "Generación de ingresos adicionales", b2: "Reducción de mensajes manuales por WhatsApp", b3: "Venta cruzada (servicio + lavado)", b4: "Caso real en uso", view: "Ver sistema en funcionamiento" }
     },
     skills: {
       title: "Habilidades",
@@ -74,7 +74,7 @@ const i18n = {
       view: "View project",
       p1: { title: "Hotel & Event Resort – Commercial Demo", desc: "Premium landing page for hotel and event hall. Modern design, conversion-focused (WhatsApp and quotes), mobile-optimized and deployed on Vercel." },
       p2: { title: "Nube Delivery", desc: "Online ordering system with Telegram integration for automatic notifications and real-time order tracking." },
-      p3: { title: "Motorcycle Wash", desc: "Informational website with Google Maps, service gallery and a direct WhatsApp button to book appointments." }
+      p3: { title: "Lead Capture & Booking System for Motorcycle Wash", badge: "Real case", desc: "Web platform focused on revenue generation and operational time savings for an active mechanic workshop.", b1: "Additional revenue generation", b2: "Reduction of manual WhatsApp messaging", b3: "Cross-selling (repairs + wash)", b4: "Real case in production", view: "View live system" }
     },
     skills: {
       title: "Skills",
