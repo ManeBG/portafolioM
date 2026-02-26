@@ -30,7 +30,8 @@ const i18n = {
       view: "Ver proyecto",
       p1: { title: "Hotel & Event Resort – Demo Comercial", desc: "Landing page premium para hotel y salón de eventos. Diseño moderno, enfoque en conversión (WhatsApp y cotizaciones), optimizado para dispositivos móviles y deploy en Vercel." },
       p2: { title: "Nube Delivery", desc: "Sistema de pedidos en línea con integración a Telegram. Gestión de repartidores y seguimiento en tiempo real." },
-      p3: { title: "Sistema de captación y agendado para lavado de motocicletas", badge: "Caso real", desc: "Plataforma enfocada en la generación de ingresos y ahorro de tiempo operativo en un taller mecánico real.", b1: "Generación de ingresos adicionales", b2: "Reducción de mensajes manuales por WhatsApp", b3: "Venta cruzada (servicio + lavado)", b4: "Caso real en uso", view: "Ver sistema en funcionamiento" }
+      p3: { title: "Sistema de captación y agendado para lavado de motocicletas", badge: "Caso real", desc: "Plataforma enfocada en la generación de ingresos y ahorro de tiempo operativo en un taller mecánico real.", b1: "Generación de ingresos adicionales", b2: "Reducción de mensajes manuales por WhatsApp", b3: "Venta cruzada (servicio + lavado)", b4: "Caso real en uso", view: "Ver sistema en funcionamiento" },
+      p4: { title: "Plataforma Operativa – Motolavado FRAGA (Interno)", badge1: "Caso real", badge2: "Sistema interno", desc: "Sistema web interno para registrar lavados, gestionar trabajadores y controlar liquidaciones desde móvil, sin instalar app.", b1: "Registro de lavados por placa/alias", b2: "Historial filtrable y trazabilidad", b3: "Gestión de trabajadores y liquidaciones", b4: "MySQL + Docker (infra local)", b5: "Diseño móvil-first (sin descarga)", view: "Ver capturas (demo)", modalNote: "Por privacidad y ser un sistema interno personalizado, el acceso público no está disponible. Estas capturas representan la interfaz." }
     },
     skills: {
       title: "Habilidades",
@@ -74,7 +75,8 @@ const i18n = {
       view: "View project",
       p1: { title: "Hotel & Event Resort – Commercial Demo", desc: "Premium landing page for hotel and event hall. Modern design, conversion-focused (WhatsApp and quotes), mobile-optimized and deployed on Vercel." },
       p2: { title: "Nube Delivery", desc: "Online ordering system with Telegram integration for automatic notifications and real-time order tracking." },
-      p3: { title: "Lead Capture & Booking System for Motorcycle Wash", badge: "Real case", desc: "Web platform focused on revenue generation and operational time savings for an active mechanic workshop.", b1: "Additional revenue generation", b2: "Reduction of manual WhatsApp messaging", b3: "Cross-selling (repairs + wash)", b4: "Real case in production", view: "View live system" }
+      p3: { title: "Lead Capture & Booking System for Motorcycle Wash", badge: "Real case", desc: "Web platform focused on revenue generation and operational time savings for an active mechanic workshop.", b1: "Additional revenue generation", b2: "Reduction of manual WhatsApp messaging", b3: "Cross-selling (repairs + wash)", b4: "Real case in production", view: "View live system" },
+      p4: { title: "Operational Platform – Motolavado FRAGA (Internal)", badge1: "Real case", badge2: "Internal system", desc: "Internal web system to log washes, manage staff and settlements from mobile devices—no app installation required.", b1: "Wash logging by plate/alias", b2: "Searchable history & traceability", b3: "Staff management & settlements", b4: "MySQL + Docker (local infra)", b5: "Mobile-first responsive UI", view: "View screenshots (demo)", modalNote: "Public access is disabled due to privacy and internal customization. These screenshots represent the interface." }
     },
     skills: {
       title: "Skills",
@@ -209,4 +211,49 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     retina_detect: true
   });
+
+  // ── 3. Modal Gallery Logic ────────────────────────────────────
+  var modal = document.getElementById("gallery-modal");
+  var btnOpen = document.getElementById("btn-open-modal-p4");
+  var btnClose = document.getElementById("btn-close-modal");
+
+  function openModal() {
+    if (!modal) return;
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden"; // lock scroll
+    if (btnClose) btnClose.focus();
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = ""; // restore scroll
+    if (btnOpen) btnOpen.focus();
+  }
+
+  if (btnOpen) {
+    btnOpen.addEventListener("click", openModal);
+  }
+
+  if (btnClose) {
+    btnClose.addEventListener("click", closeModal);
+  }
+
+  if (modal) {
+    // Close on click outside
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Close on ESC key
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal.classList.contains("open")) {
+        closeModal();
+      }
+    });
+  }
 });

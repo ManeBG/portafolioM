@@ -172,26 +172,23 @@
 
           <!-- Card 3 – Moto Lavado -->
           <div class="card project-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-            <div class="card-row">
-              <div class="card-img-wrap">
-                <img src="img/moto-lavado.png" alt="Moto Lavado">
+            <div class="card-row card-row-stretch">
+              <div class="card-img-wrap img-cover-stretch">
+                <img src="img/moto-lavado.png" alt="Moto Lavado" style="object-position: top center;">
               </div>
-              <div class="card-body">
-                <h3 class="card-title"
-                  style="display: flex; flex-direction: column; gap: 0.45rem; justify-content: center; align-items: flex-start;">
-                  <span data-i18n="projects.p3.title" style="line-height: 1.2;">Sistema de captación y agendado para
-                    lavado de motocicletas</span>
-                  <span
-                    style="font-size: 0.65rem; padding: 0.2rem 0.55rem; background: rgba(34, 197, 94, 0.1); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 999px; font-weight: 600; white-space: nowrap; display: inline-flex; align-items: center; gap: 0.25rem;">
+              <div class="card-body project-body">
+                <div class="project-header">
+                  <h3 class="card-title" data-i18n="projects.p3.title">Sistema de captación y agendado para
+                    lavado de motocicletas</h3>
+                  <span class="badge-premium">
                     <i class="bi bi-check-circle-fill"></i>
                     <span data-i18n="projects.p3.badge">Caso real</span>
                   </span>
-                </h3>
-                <div style="flex: 1; display: flex; flex-direction: column; gap: 0.75rem;">
-                  <p class="card-text" style="flex: none;" data-i18n="projects.p3.desc">
-                    Plataforma web enfocada en la generación de ingresos y ahorro de tiempo para un taller mecánico
-                    real.
-                  </p>
+                </div>
+                <p class="card-text project-desc" data-i18n="projects.p3.desc">
+                  Plataforma web enfocada en la generación de ingresos y ahorro de tiempo para un taller mecánico real.
+                </p>
+                <div class="project-bullets-wrap">
                   <ul class="project-bullets">
                     <li><i class="bi bi-check2"></i> <span data-i18n="projects.p3.b1">Generación de ingresos
                         adicionales</span></li>
@@ -202,11 +199,60 @@
                     <li><i class="bi bi-check2"></i> <span data-i18n="projects.p3.b4">Caso real en uso</span></li>
                   </ul>
                 </div>
-                <div>
+                <div class="project-cta">
                   <a href="https://motolavado-fraga.vercel.app/" class="btn btn-outline" target="_blank" rel="noopener">
                     <i class="bi bi-box-arrow-up-right"></i>
                     <span data-i18n="projects.p3.view">Ver sistema en funcionamiento</span>
                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 – Plataforma Operativa -->
+          <div class="card project-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+            <div class="card-row card-row-stretch">
+              <div class="card-img-wrap img-cover-stretch">
+                <img src="img/motolavado-interno-1.png" alt="Motolavado Interno" style="object-position: top center;"
+                  onerror="this.src='./img/blueLogoM.svg'; this.style.objectFit='contain'; this.style.padding='2rem';">
+              </div>
+              <div class="card-body project-body">
+                <div class="project-header">
+                  <h3 class="card-title" data-i18n="projects.p4.title">Plataforma Operativa – Motolavado FRAGA (Interno)
+                  </h3>
+                  <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    <span class="badge-premium">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span data-i18n="projects.p4.badge1">Caso real</span>
+                    </span>
+                    <span class="badge-premium"
+                      style="color: #f59e0b; border-color: rgba(245, 158, 11, 0.2); background: rgba(245, 158, 11, 0.1);">
+                      <i class="bi bi-lock-fill"></i>
+                      <span data-i18n="projects.p4.badge2">Sistema interno</span>
+                    </span>
+                  </div>
+                </div>
+                <p class="card-text project-desc" data-i18n="projects.p4.desc">
+                  Sistema web interno para registrar lavados, gestionar trabajadores y controlar liquidaciones desde
+                  móvil, sin instalar app.
+                </p>
+                <div class="project-bullets-wrap">
+                  <ul class="project-bullets">
+                    <li><i class="bi bi-check2"></i> <span data-i18n="projects.p4.b1">Registro de lavados por
+                        placa/alias</span></li>
+                    <li><i class="bi bi-check2"></i> <span data-i18n="projects.p4.b2">Historial filtrable y
+                        trazabilidad</span></li>
+                    <li><i class="bi bi-check2"></i> <span data-i18n="projects.p4.b3">Gestión de trabajadores y
+                        liquidaciones</span></li>
+                    <li><i class="bi bi-check2"></i> <span data-i18n="projects.p4.b4">MySQL + Docker (infra
+                        local)</span></li>
+                  </ul>
+                </div>
+                <div class="project-cta">
+                  <button class="btn btn-outline" id="btn-open-modal-p4">
+                    <i class="bi bi-images"></i>
+                    <span data-i18n="projects.p4.view">Ver capturas (demo)</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -350,6 +396,61 @@
   <a href="https://wa.me/527445350744" target="_blank" rel="noopener" class="wa-fab" aria-label="WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
+
+  <!-- ====================================================
+       MODAL PROJECT GALLERY
+       ==================================================== -->
+  <div class="modal-overlay" id="gallery-modal" aria-hidden="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" data-i18n="projects.p4.title">Plataforma Operativa – Motolavado FRAGA (Interno)</h3>
+        <button class="modal-close" id="btn-close-modal" aria-label="Cerrar modal"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-note">
+          <i class="bi bi-info-circle-fill"></i>
+          <span data-i18n="projects.p4.modalNote">Por privacidad y ser un sistema interno personalizado, el acceso
+            público no está disponible. Estas capturas representan la interfaz.</span>
+        </p>
+
+        <!-- Extended Content -->
+        <div style="margin-bottom: 1.5rem;">
+          <ul class="project-bullets" style="margin-bottom: 1rem;">
+            <li><i class="bi bi-check2"></i> <span data-i18n="projects.p4.b5">Diseño móvil-first (sin descarga)</span>
+            </li>
+          </ul>
+          <div class="project-chips" style="margin-bottom: 0;">
+            <span class="skill-chip">Flask</span>
+            <span class="skill-chip">MySQL</span>
+            <span class="skill-chip">Docker</span>
+            <span class="skill-chip">Debian</span>
+            <span class="skill-chip">Responsive</span>
+          </div>
+        </div>
+
+        <div class="modal-grid">
+          <div class="modal-img-wrapper"><img src="img/motolavado-interno-1.png" alt="Screenshot 1"
+              onerror="this.src='./img/blueLogoM.svg'; this.style.objectFit='contain'; this.style.padding='2rem'; this.style.backgroundColor='var(--bg-alt)';">
+          </div>
+          <div class="modal-img-wrapper"><img src="img/motolavado-interno-2.png" alt="Screenshot 2"
+              onerror="this.src='./img/blueLogoM.svg'; this.style.objectFit='contain'; this.style.padding='2rem'; this.style.backgroundColor='var(--bg-alt)';">
+          </div>
+          <div class="modal-img-wrapper"><img src="img/motolavado-interno-3.png" alt="Screenshot 3"
+              onerror="this.src='./img/blueLogoM.svg'; this.style.objectFit='contain'; this.style.padding='2rem'; this.style.backgroundColor='var(--bg-alt)';">
+          </div>
+          <div class="modal-img-wrapper"><img src="img/motolavado-interno-4.png" alt="Screenshot 4"
+              onerror="this.src='./img/blueLogoM.svg'; this.style.objectFit='contain'; this.style.padding='2rem'; this.style.backgroundColor='var(--bg-alt)';">
+          </div>
+          <div class="modal-img-wrapper"><img src="img/motolavado-interno-5.png" alt="Screenshot 5"
+              onerror="this.src='./img/blueLogoM.svg'; this.style.objectFit='contain'; this.style.padding='2rem'; this.style.backgroundColor='var(--bg-alt)';">
+          </div>
+          <div class="modal-img-wrapper"><img src="img/motolavado-interno-6.png" alt="Screenshot 6"
+              onerror="this.src='./img/blueLogoM.svg'; this.style.objectFit='contain'; this.style.padding='2rem'; this.style.backgroundColor='var(--bg-alt)';">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ====================================================
        FOOTER
